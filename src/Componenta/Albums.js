@@ -5,8 +5,8 @@ import { Usecontext1 } from "../UserContext/Usercontext1";
 import "./Albums.css";
 
 export default function Albums() {
-  const { data, setData } = useContext(Usecontext1);
-  const url = "https://jsonplaceholder.typicode.com/albums";
+  const { data, setData ,UserName1,SetuserName1} = useContext(Usecontext1);
+  const url = `https://jsonplaceholder.typicode.com/albums/?userId=${UserName1}`;
 
   const fetchData = async (url) => {
     try {
@@ -27,8 +27,8 @@ export default function Albums() {
       {data &&
         data.map((elem) => (
           <div key={elem.id}>
-            <p>{elem.userId}</p>
-            <p>{elem.title}</p>
+            <p>UserId:{elem.userId}</p>
+            <p>Title:{elem.title}</p>
           </div>
         ))}
     </div>
