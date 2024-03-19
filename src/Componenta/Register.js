@@ -10,7 +10,6 @@ export default function Register() {
       console.log("hii")
       setUserArray((prevStudents) => [...prevStudents, Userobj]);
       SetuserName1(Userobj.name)
-       //In React, it isn't allowed to change the original state array, so we can't use the push() method. We use the spread syntax (...) to unpack the elements of the existing array into a new array and add another value at the end.
       setUserObj({ name: "", mail:"",pass:""});
       
       console.log(UserArray)
@@ -66,6 +65,7 @@ export default function Register() {
                         className="Register-input"
                     />
                     <br />
+                    
                     <button onClick={AddCustomer} className="Register-button">Submit</button>
                 </div>
             </div>

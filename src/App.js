@@ -26,7 +26,7 @@ export default function App() {
       
         
         <Routes>
-          <Route path="/feeds" index element={<Feeds />}></Route>
+          <Route path="/feeds"  element={<Feeds />}></Route>
           {/* <Route path="/post" element={<Post />}></Route> */}
           <Route path="/albums" element={<Albums />}></Route>
         </Routes>
