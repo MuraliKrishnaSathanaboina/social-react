@@ -14,6 +14,7 @@ import Comments from "./Componenta/Comments";
 
 export default function App() {
   const { flag, setFlag } = useContext(Usecontext1);
+  const PATH = process.env.REACT_APP_PATH;
   //const {flag,setFlag} = useContext(srikanth)
   //const [flag,setFlag] = useState()
   return (
@@ -25,10 +26,10 @@ export default function App() {
 
       
         <Routes>
-          <Route path="/" index element={<Feeds />}></Route>
-          <Route path="/post" element={<Posts />}></Route>
-          <Route path="/albums" element={<Albums />}></Route>
-          <Route path="/comments" element={<Comments/>}></Route>
+          <Route index path={`${PATH}/`}  element={<Feeds />}></Route>
+          <Route path={`${PATH}/post`} element={<Posts />}></Route>
+          <Route path={`${PATH}/albums`} element={<Albums />}></Route>
+          <Route path={`${PATH}/comments`} element={<Comments/>}></Route>
         </Routes>
       </Router>
     </>

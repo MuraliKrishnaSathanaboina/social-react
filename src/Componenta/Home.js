@@ -8,7 +8,9 @@ import { useEffect } from 'react';
 function Home() {
   const { flag, setFlag, UserName1 } = useContext(Usecontext1);
   const [num, setNum] = useState(0);
-  const[album,setAlbum] = useState(0)
+  const PATH = process.env.REACT_APP_PATH;
+  console.log(PATH)
+  
 
   const handleFileChange = (event) => {
     const UserID = document.getElementById("text1").value;
@@ -19,13 +21,6 @@ function Home() {
   };
   const url = `https://jsonplaceholder.typicode.com/posts/?userId=${num}`;
     useFetch(url);
-  // if (album === 1) {
-  //   const url = `https://jsonplaceholder.typicode.com/posts/?userId=${num}`;
-  //   useFetch1(url);
-  // } else if (album === 2) {
-  //   const url = `https://jsonplaceholder.typicode.com/albums/?userId=${num}`;
-  //   useFetch1(url);
-  // }
 
   return (
     <div className="home-container">
@@ -42,14 +37,14 @@ function Home() {
       </div>
       <div className="content-container">
         <div className="side-nav">
-          <div onClick={()=>setAlbum(1)}>
-          <Link to="/">Feeds</Link>
+          <div >
+          <Link to={`${PATH}/`} >Feeds</Link>
           </div>
-          <div onClick={()=>setAlbum(2)}>
-          <Link to="/albums">Albums</Link>
+          <div >
+          <Link to={`${PATH}/albums`}>Albums</Link>
           </div>
-          <div onClick={()=>setAlbum(2)}>
-          <Link to="/post">Posts</Link>
+          <div >
+          <Link to={`${PATH}/post`}>Posts</Link>
           </div>
           
         </div>
