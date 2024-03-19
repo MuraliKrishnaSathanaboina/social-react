@@ -7,7 +7,7 @@ import Login from "./Componenta/Login";
 import Register from "./Componenta/Register";
 
 import Feeds from "./Componenta/Feeds";
-// import Post from "./Post";
+import Posts from "./Componenta/Posts";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Albums from "./Componenta/Albums";
 import Comments from "./Componenta/Comments";
@@ -20,14 +20,13 @@ export default function App() {
     <>
     <Router>
       {flag == 0 || flag == 2 ? <Login /> : <Home />}
-      {/* {flag ===0 && <Login/>} */}
-      {/* {flag ===1 && <Home/>} */}
+      
       {flag === 2 && <Register />}
 
       
         <Routes>
-          <Route path="/feeds"  element={<Feeds />}></Route>
-          {/* <Route path="/post" element={<Post />}></Route> */}
+          <Route path="/"  element={<Feeds />}></Route>
+          <Route path="/post" element={<Posts />}></Route>
           <Route path="/albums" element={<Albums />}></Route>
           <Route path="/comments" element={<Comments/>}></Route>
         </Routes>

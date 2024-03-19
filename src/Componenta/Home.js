@@ -43,10 +43,13 @@ function Home() {
       <div className="content-container">
         <div className="side-nav">
           <div onClick={()=>setAlbum(1)}>
-          <Link to="/feeds">Feeds</Link>
+          <Link to="/">Feeds</Link>
           </div>
           <div onClick={()=>setAlbum(2)}>
           <Link to="/albums">Albums</Link>
+          </div>
+          <div onClick={()=>setAlbum(2)}>
+          <Link to="/post">Posts</Link>
           </div>
           
         </div>
