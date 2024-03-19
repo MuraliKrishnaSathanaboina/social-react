@@ -10,6 +10,7 @@ import Feeds from "./Componenta/Feeds";
 // import Post from "./Post";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Albums from "./Componenta/Albums";
+import Comments from "./Componenta/Comments";
 
 export default function App() {
   const { flag, setFlag } = useContext(Usecontext1);
@@ -24,11 +25,11 @@ export default function App() {
       {flag === 2 && <Register />}
 
       
-        
         <Routes>
           <Route path="/feeds"  element={<Feeds />}></Route>
           {/* <Route path="/post" element={<Post />}></Route> */}
           <Route path="/albums" element={<Albums />}></Route>
+          <Route path="/comments" element={<Comments/>}></Route>
         </Routes>
       </Router>
     </>

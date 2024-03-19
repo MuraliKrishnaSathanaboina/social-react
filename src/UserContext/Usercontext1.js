@@ -9,7 +9,9 @@ export const UsecontextFun = (props) =>{
     const [UserArray,setUserArray] = useState([]); 
     const [UserName1,SetuserName1] = useState()
     const [flag,setFlag] = useState(0)
-    const val ={Userobj,setUserObj,UserArray,setUserArray,flag,setFlag,UserName1,SetuserName1}
+    const [data, setData] = useState([])
+    const [count,setCount] = useState(0)
+    const val ={Userobj,setUserObj,UserArray,setUserArray,flag,setFlag,UserName1,SetuserName1,data, setData,count,setCount}
 
     return(
         <Usecontext1.Provider value={val}>{props.children}</Usecontext1.Provider>

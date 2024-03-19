@@ -8,7 +8,7 @@ export default function Register() {
     const {flag,setFlag,Userobj,setUserObj,UserArray,setUserArray,UserName1,SetuserName1}=useContext(Usecontext1);
     const AddCustomer =() =>{
       console.log("hii")
-      setUserArray((prevStudents) => [...prevStudents, Userobj]);
+      setUserArray((prevStudents) => [...prevStudents, Userobj]);    
       SetuserName1(Userobj.name)
       setUserObj({ name: "", mail:"",pass:""});
       
