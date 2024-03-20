@@ -23,6 +23,8 @@ function Home() {
     useFetch(url);
 
   return (
+    <>
+    
     <div className="home-container">
       <div className="top-nav-container">
         <div className="nav-links">
@@ -38,7 +40,7 @@ function Home() {
       <div className="content-container">
         <div className="side-nav">
           <div >
-          <Link to={`${PATH}/`} >Feeds</Link>
+          <Link to={`${PATH}/feeds`} >Feeds</Link>
           </div>
           <div >
           <Link to={`${PATH}/albums`}>Albums</Link>
@@ -50,6 +52,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

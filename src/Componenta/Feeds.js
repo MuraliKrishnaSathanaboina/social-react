@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import "./Feeds.css";
 export default function Feeds() {
   const {  setData, count, setCount } = useContext(Usecontext1);
+  const PATH = process.env.REACT_APP_PATH;
 
   const url = "https://jsonplaceholder.typicode.com/posts";
   const [data1] = useFetch(url);
@@ -20,7 +21,7 @@ export default function Feeds() {
             <div>Title: {elem.title}</div>
             <div>Body: {elem.body}</div>
             <div onClick={() => setCount(elem.id)}>
-              <Link to="/Comments">
+              <Link to={`${PATH}/comments`}>
                 <button>Go to Comments</button>
               </Link>
             </div>
